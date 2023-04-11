@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Movies</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" >
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <div style="float:left; padding-left:100px;">
+   <img class="img1"  src="{% static 'R.png' %}">
+  </div>
+  <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="{% url 'movieapp:index' %}" class="nav-link px-2 link-secondary">Home</a></li>
+        <li><a href="{% url 'movieapp:add' %}" class="nav-link px-2 link-dark">Add New Movies</a></li>
+  </ul>
+</div>
+
+<div class="container">
+  <div class="row">
+    {% block body%}
+    {% endblock %}
+  </div>
+  </div>
+
+
+</body>
+</html>
+
+
+
+
+

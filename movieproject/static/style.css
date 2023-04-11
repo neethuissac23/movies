@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+
+ul{
+    display: flex;
+    float: right;
+    padding-right: 100px;
+}
+.img1{
+    float: left;
+    padding-left: -5px;
+    margin-top: -61px;
+    height: 100px;
+    width: 100px;
+    }
+.img2{
+height: 250px;
+width: 250px;
+}
+h3{
+    text-align:center;
+}

@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <table>
+    <tr><td><u><b>ADD NEW MOVIES</b></u></td></tr>
+    <tr>
+      <td style="padding:20px;">Enter Your Movie Name</td><td><input type="text" name="name" placeholder="Enter Your Movie Name"></td>
+    </tr>
+    <tr>
+      <td style="padding:20px;">Enter the Movie Description</td><td><input type="text" name="desc" placeholder="Enter the Movie Description"></td>
+    </tr>
+    <tr>
+      <td style="padding:20px;">Enter Your Movie Year</td><td><input type="text" name="year" placeholder="Enter Your Movie Year"></td>
+    </tr>
+    <tr>
+      <td style="padding:20px;">Upload Image</td><td><input type="file" name="img" ></td>
+    </tr>
+    <tr>
+      <td style="padding:20px;"></td><td><input type="submit"  ></td>
+    </tr>
+  </table>
+
+
+
+</form>
+{% endblock %}

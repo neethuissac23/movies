@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{% block body %}
+
+{% for i in movie %}
+<div class="col-sm-3">
+    <a href="{% url 'movieapp:detail' i.id %}">
+        <h3>{{ i.name }}</h3>
+        <img class="img2" src="{{ i.img.url }}" alt="">
+    </a>
+    <a class="btn btn-danger" href="{% url 'todoapp:deletelist' i.id %}">Delete</a>
+   <a class="btn btn-success" href="{% url 'todoapp:updatelist' i.id %}">Update</a>
+</div>
+{% endfor %}
+{% endblock %}}

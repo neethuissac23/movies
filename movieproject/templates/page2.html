@@ -1,0 +1,12 @@
+{% extends 'header.html'%}
+
+{% block body %}
+<img  src="{{ movie.img.url }}" alt="" width="100" height="100">
+{{movie.name}}<br>
+{{movie.desc}}<br>
+{{movie.year}}<br>
+
+<a class="btn btn-warning" href="{% url 'movieapp:update' movie.id %}">UPDATE</a><br>
+<a class="btn btn-danger" href="{% url 'movieapp:delete' movie.id %}">DELETE</a>
+
+{% endblock %}
